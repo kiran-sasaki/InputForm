@@ -73,7 +73,16 @@
                 if(telRegex.test(telphone.value))
                     telTextError.textContent="";
                 else telTextError.textContent="telphone is incorrect";
-            })
+            });
+            const password=document.querySelector('#password');
+            const passwordTextError=document.querySelector('.password-error');
+            password.addEventListener('input',function(){
+                let passwordRegex=RegExp('^[A-Za-z]{8,}$');
+                if(passwordRegex.test(password.value))
+                        passwordTextError.textContent="";
+                else
+                    passwordTextError.textContent="Password is incorrect";
+        });
             const salary =document.querySelector('#salary');
             const output=document.querySelector('.salary-output');
             output.textContent=salary.value;
