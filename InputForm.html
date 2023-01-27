@@ -77,7 +77,7 @@
             const password=document.querySelector('#password');
             const passwordTextError=document.querySelector('.password-error');
             password.addEventListener('input',function(){
-                let passwordRegex=RegExp('^[A-Za-z]{8,}$');
+                let passwordRegex=RegExp('(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z])(?=.*[+@#$%^&*!.()-]).{8,}');
                 if(passwordRegex.test(password.value))
                         passwordTextError.textContent="";
                 else
